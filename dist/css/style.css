@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    align-items: center;
+    /*background-color: #e19999;*/
+    background-color: #be9fe1;
+}
+
+#container {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    color: #dddddd;
+    row-gap: 0.5em;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+    /*color: black;*/
+    color: white;
+    padding-left: 1em;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: inherit;
+}
+
+#logo>span {
+    font-size: 2em;
+    font-family: 'Yellowtail', cursive;
+}
+
+#newProject {
+    padding-right: 1em;
+    justify-self: end;
+}
+
+.grid {
+    padding: 0.5em;
+    font-size: 1.1em;
+    color: black;
+    font-family: 'Patrick Hand', cursive;
+    -webkit-column-width: 220px;
+    -moz-column-width: 220px;
+    column-width: 220px;
+    column-gap: 0.5em;
+}
+
+.grid-item {
+    margin-bottom: 0.5em;
+    background-color: #c9b6e4;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    overflow: hidden;
+}
+
+.project {
+    list-style-type: none;
+    /*background-color: #f5a8a8;*/
+    background-color: inherit;
+}
+
+.projectTitle {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.projectTitle>span {
+    justify-self: start;
+    padding-left: 0.5em;
+}
+
+.projectTitle>button {
+    justify-self: end;
+    padding-right: 0.5em;
+}
+
+.task {
+    /*background-color: #fab7b7;*/
+    background-color: #e1ccec;
+}
+
+.taskList {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    margin: 0.5em;
+    list-style-type: none;
+}
+
+.taskHeader {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0.3em;
+}
+
+.taskHeader>button {
+    justify-self: end;
+}
+
+.task>p {
+    padding: 0.3em;
+}
+
+.taskAddDelete {
+    display: grid;
+    margin: 0.5em;
+    padding: 0.7em;
+    /*background-color: #fab7b7;*/
+    background-color: #e1ccec;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#newProjectPopUp, #newTaskPopUp {
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /*background-color: #f5a8a8;*/
+    background-color: #c9b6e4;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-rows: auto;
+    color: black;
+    grid-gap: 1em;
+    box-shadow: 0 0 0 500vmax rgba(0, 0, 0, .5);
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#newProjectPopUp {
+    max-width: 300px;
+    width: 50%;
+    display: none;
+}
+
+#newTaskPopUp {
+    display: none;
+    width: 70%;
+    max-width: 450px;
+}
+
+#cancelButton, #taskCancelButton {
+    justify-self: end;
+    padding-right: 0.4em;
+}
+
+#projectForm, #taskDetails {
+    display: grid;
+    grid-template-rows: auto;
+    text-align: center;
+    grid-gap: 1em;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.3em;
+}
+
+.projectName, #taskName, #taskDescription, #taskDate , #priorityLevel{
+    width: 80%;
+    place-self: center;
+    outline: none;
+    border-color: transparent;
+}
+
+.projectName {
+    max-width: 300px;
+    font-size: 0.8em;
+    border-radius: 25px;
+}
+
+#taskName, #taskDescription, #taskDate , #priorityLevel{
+    max-width: 450px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+#addProjectButton {
+    margin-bottom: 1em;
+}
+
+#priorityText{
+    place-self: center;
+    max-width: 450px;
+    width: 20%;
+}
+
+
+#taskAddFormButton {
+    margin-bottom: 1em;
+    place-self: center;
+    transform: scale(1.5);
+    outline: none;
+    border: none;
+    background: blueviolet;
+}
+
+
+/*[contenteditable]{
+    transition: padding .3s ease-in-out;
+}
+
+[contenteditable]:hover,
+[contenteditable]:focus {
+  padding: .25em;
+}
+
+
+[contenteditable]:hover {
+    background: #fafafa;
+    outline: 2px solid #eee;
+  }
+  
+  [contenteditable]:focus {
+    background: #efefef;
+    outline: 2px solid blue;
+  }
+  */
