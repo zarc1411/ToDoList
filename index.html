@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <i class="fa fa-2x fa-list" aria-hidden="true"></i>
+                <span>ToDoEr</span>
+            </div>
+            <button id="newProject">
+                <i class="fa fa-2x fa-plus-circle" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="grid">
+            <div class="grid-item">
+                <ul class="project">
+                    <li class="projectTitle">
+                        <span>Some Title</span>
+                        <button class="collapseProjectButton">
+                            <i class="fa fa-2x fa-tasks" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                    <ul class="taskList">
+                        <li class="task">
+                            <div class="taskHeader">
+                                <span>High Priority</span>
+                                <button class="deleteTaskButton">
+                                    <i class="fa fa-2x fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <p contenteditable="true">Finish to do list</p>
+                            <p contenteditable="true">I need to do it before xyz happens, otherwise I'll be too late.
+                                Cuz if I dont then I'll just die okay?
+                            </p>
+                            <p contenteditable="true">12/12/2019</p>
+                        </li>
+                        <li class="task">
+                            <div class="taskHeader">
+                                <span>High Priority</span>
+                                <button class="deleteTaskButton">
+                                    <i class="fa fa-2x fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <p>lets do some homework</p>
+                            <p>homework is boring</p>
+                            <p>12/12/2019</p>
+                        </li>
+                    </ul>
+                    <li class="taskAddDelete">
+                        <button class="addTaskButton">
+                            <i class="fa fa-3x fa-plus-circle" aria-hidden="true"></i>
+                        </button>
+                        <button class="deleteProjectButton">
+                            <i class="fa fa-3x fa-trash-o" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="newProjectPopUp">
+            <button id="cancelButton">
+                <i class="fa fa-3x fa-times" aria-hidden="true"></i>
+            </button>
+            <form id="projectForm">
+                <label>Project Name</label>
+                <input class="projectName" type="text">
+            </form>
+            <button id="addProjectButton">
+                <i class="fa fa-3x fa-plus" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div id="newTaskPopUp">
+            <button id="taskCancelButton">
+                <i class="fa fa-3x fa-times" aria-hidden="true"></i>
+            </button>
+            <form id="taskDetails">
+                <input id="taskName" name="taskName" placeholder="Enter task title" type="text">
+                <textarea id="taskDescription" rows="5" cols="33" placeholder="Write a short description"></textarea>
+                <input id="taskDate" type="date">
+                <label id="priorityText">Priority</label>
+                <input id="priorityLevel" placeholder="High:3, low:1">
+            </form>
+            <input id="taskAddFormButton" type="submit"></i>
+            </input>
+        </div>
+        <script src="main.js"></script>
+</body>
+
+</html>
