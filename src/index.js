@@ -2,6 +2,7 @@ import Project from './modules/project';
 import Task from './modules/task';
 
 const ToDoList = (function () {
+    Project.loadProject();
     const newProjectButton = document.getElementById("newProject");
     newProjectButton.addEventListener('click', Project.createNewProject);
 
