@@ -114,7 +114,7 @@ button {
     padding: 0.3em;
 }
 
-.taskAddDelete {
+.taskAddProjectDelete {
     display: grid;
     margin: 0.5em;
     padding: 0.7em;
@@ -206,30 +206,6 @@ button {
 #taskAddFormButton {
     margin-bottom: 1em;
     place-self: center;
-    transform: scale(1.5);
     outline: none;
     border: none;
-    background: blueviolet;
 }
-
-
-/*[contenteditable]{
-    transition: padding .3s ease-in-out;
-}
-
-[contenteditable]:hover,
-[contenteditable]:focus {
-  padding: .25em;
-}
-
-
-[contenteditable]:hover {
-    background: #fafafa;
-    outline: 2px solid #eee;
-  }
-  
-  [contenteditable]:focus {
-    background: #efefef;
-    outline: 2px solid blue;
-  }
-  */
