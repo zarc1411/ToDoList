@@ -16,16 +16,17 @@ const Task = (function () {
         const prioritySpan = document.createElement('span');
         if(listOfTasks[taskTitle][2] === '1'){
             prioritySpan.innerText = "High";
-            taskHeaderDiv.style.backgroundColor = "#f8615a";
+            prioritySpan.style.color = "#d63447";
         } 
         else if(listOfTasks[taskTitle][2] === '2'){
             prioritySpan.innerText = "Medium";
-            taskHeaderDiv.style.backgroundColor = "#ffdcb4";
+            prioritySpan.style.color = "#f57b51";
         } 
         else if(listOfTasks[taskTitle][2] === '3'){
             prioritySpan.innerText = "Low";
-            taskHeaderDiv.style.backgroundColor = "#a8df65";
+            prioritySpan.style.color = "#79d70f";
         } 
+        prioritySpan.style.fontWeight = "bold";
         taskHeaderDiv.appendChild(prioritySpan);
 
         createTaskDeleteButton(taskHeaderDiv);
